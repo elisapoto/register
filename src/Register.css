@@ -1,45 +1,48 @@
-/* Register.css */
-
 .register-container {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+    background-image: url('/Users/elisapotolinschi/Downloads/logbackground2.webp');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
   }
   
   .form-group {
     margin-bottom: 20px;
   }
   
-  label {
+  .label-with-placeholder {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
+    font-size: 30px; /* Increase font size */
+    font-weight: bold; /* Optionally increase font weight */
   }
   
-  input[type="text"],
-  input[type="email"],
-  input[type="password"] {
-    width: 100%;
+  .input-field {
+    width: 101%;
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
   }
   
-  button {
-    width: 100%;
-    padding: 10px;
+  .input-field:focus::placeholder {
+    color: transparent; /* Hide placeholder text when input is focused */
+  }
+  
+  .submit-button {
+    width: 80%;
+    padding: 5px;
     font-size: 16px;
     border: none;
     border-radius: 5px;
-    background-color: #007bff;
-    color: #fff;
+    color: #000000;
     cursor: pointer;
+    margin-left: 13%;
   }
   
-  button:hover {
-    background-color: #0056b3;
+  .submit-button:hover {
+    background-color: #4b4b77;
   }
   

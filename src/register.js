@@ -1,57 +1,99 @@
-// Register.js
-
 import React, { useState } from 'react';
-import './Register.css'; // Import your CSS file for styling (if needed)
+import './Register.css'; // Import your CSS file for styling
 
 function Register() {
-  // State variables to store user input
-  const [username, setUsername] = useState('');
-  const [email, setEmail] = useState('');
+  // State variables for form fields
+  const [name, setName] = useState('');
+  const [address, setAddress] = useState('');
   const [password, setPassword] = useState('');
+  const [organizationName, setOrganizationName] = useState('');
+  const [headquartersAddress, setHeadquartersAddress] = useState('');
 
   // Function to handle form submission
   const handleSubmit = (event) => {
     event.preventDefault();
-    // You can add code here to handle form submission, such as sending data to a backend server
-    console.log('Submitted:', username, email, password);
+    // Form submission logic goes here
   };
 
   return (
+    <div>
+        
     <div className="register-container">
-      <h2>Register</h2>
       <form onSubmit={handleSubmit}>
+        {/* Form inputs */}
+        {/* Add input fields for name, address, password, organization name, headquarters address */}
+        <h2 color='white'> Sign Up as Organization Administrator</h2> 
         <div className="form-group">
-          <label htmlFor="username">Username:</label>
-          <input
-            type="text"
-            id="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
-          />
+          <label htmlFor="name" className="label-with-placeholder">
+            <input
+              type="text"
+              id="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+              className="input-field"
+              placeholder="Enter your name"
+            />
+          </label>
         </div>
         <div className="form-group">
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
+          <label htmlFor="address" className="label-with-placeholder">
+            
+            <input
+              type="text"
+              id="address"
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
+              required
+              className="input-field"
+              placeholder="Enter your address"
+            />
+          </label>
         </div>
         <div className="form-group">
-          <label htmlFor="password">Password:</label>
-          <input
-            type="password"
-            id="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
+          <label htmlFor="password" className="label-with-placeholder">
+            
+            <input
+              type="password"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+              className="input-field"
+              placeholder="Enter your password"
+            />
+          </label>
         </div>
-        <button type="submit">Register</button>
+        <div className="form-group">
+          <label htmlFor="organizationName" className="label-with-placeholder">
+            
+            <input
+              type="text"
+              id="organizationName"
+              value={organizationName}
+              onChange={(e) => setOrganizationName(e.target.value)}
+              required
+              className="input-field"
+              placeholder="Enter organization name"
+            />
+          </label>
+        </div>
+        <div className="form-group">
+          <label htmlFor="headquartersAddress" className="label-with-placeholder">
+            <input
+              type="text"
+              id="headquartersAddress"
+              value={headquartersAddress}
+              onChange={(e) => setHeadquartersAddress(e.target.value)}
+              required
+              className="input-field"
+              placeholder="Enter headquarters address"
+            />
+          </label>
+        </div>
+        <button type="submit" className="submit-button">Register</button>
       </form>
+    </div>
     </div>
   );
 }
